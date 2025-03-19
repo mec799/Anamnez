@@ -6,7 +6,7 @@ Bu uygulama, hekimlerin ve tıp öğrencilerinin hasta anamnez (öykü) alma sü
 
 ### 📋 Genel Bakış
 
-AI Destekli Tıbbi Anamnez Uygulaması, özellikle TUS sınavına hazırlanan tıp öğrencileri ve hekimler için tasarlanmış, anamnez alma sürecini interaktif ve dijital hale getiren bir araçtır. Uygulama, çeşitli yapay zeka destekli özellikleriyle etkili ve kapsamlı anamnez alınmasına yardımcı olur.
+AI Destekli Tıbbi Anamnez Uygulaması, tıp öğrencileri ve hekimler için tasarlanmış, anamnez alma sürecini interaktif ve dijital hale getiren bir araçtır. Uygulama, çeşitli yapay zeka destekli özellikleriyle etkili ve kapsamlı anamnez alınmasına yardımcı olur.
 
 ### ✨ Özellikler
 
