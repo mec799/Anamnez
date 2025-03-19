@@ -27,16 +27,15 @@ translations = {
         "model_selection": "Model Seçimi",
         "api_usage": "API Kullanımı",
         "api_usage_count": "istek",
-        "api_usage_info": "API Kullanımı Hakkında",
+        "api_usage_info": "Uygulama Kullanım Rehberi",
         "api_usage_details": [
-            "Bu uygulama OpenAI API'sini kullanır",
-            "Kendi API anahtarınızı kullanmanız gerekir",
-            "Her AI istek için bir API çağrısı yapılır",
-            "OpenAI API ücretlendirmesi modele göre değişir:",
-            "GPT-3.5-turbo: En ekonomik seçenek",
-            "GPT-4/GPT-4-turbo: Daha pahalı ama daha yetenekli"
+            "**Yapay Zeka Ne Zaman Devreye Girer?**",
+            "1. **Soru Önerileri:** Hasta öyküsünün bir kısmını girdikten sonra \"Soru Önerileri Al\" butonuna tıklayarak hastaya sorulabilecek akıllı takip soruları alabilirsiniz.",
+            "2. **İlaç Bilgileri:** Hastanın kullandığı ilaçları girip \"İlaç Bilgilerini Al\" butonuna tıklayarak, ilaçların etken maddeleri ve grupları hakkında detaylı bilgi edinebilirsiniz.",
+            "3. **Ön Tanılar:** Hasta şikayeti ve öyküsünü girdikten sonra \"Ön Tanı Önerileri Al\" butonuyla muhtemel tanılar hakkında fikir alabilirsiniz.",
+            "4. **Tetkik Önerileri:** \"Tetkik ve Muayene Önerileri Al\" butonu ile vaka için uygun olabilecek tetkik ve fizik muayene odakları önerilerini görüntüleyebilirsiniz."
         ],
-        "api_key_link": "API anahtarını [OpenAI API sayfasından](https://platform.openai.com/api-keys) alabilirsiniz.",
+        "api_key_link": "**Not:** Bu uygulama için bir OpenAI API anahtarı gereklidir. [OpenAI API sayfasından](https://platform.openai.com/api-keys) edinebilirsiniz.",
         "tab_patient": "Hasta Anamnezi",
         "tab_system": "Sistem Sorgulaması",
         "tab_reference": "Referans",
@@ -184,16 +183,15 @@ translations = {
         "model_selection": "Model Selection",
         "api_usage": "API Usage",
         "api_usage_count": "requests",
-        "api_usage_info": "About API Usage",
+        "api_usage_info": "Application Usage Guide",
         "api_usage_details": [
-            "This application uses the OpenAI API",
-            "You need to use your own API key",
-            "An API call is made for each AI request",
-            "OpenAI API pricing varies by model:",
-            "GPT-3.5-turbo: Most economical option",
-            "GPT-4/GPT-4-turbo: More expensive but more capable"
+            "**When Does AI Assist You?**",
+            "1. **Question Suggestions:** After entering part of the patient history, click the \"Get Question Suggestions\" button to receive intelligent follow-up questions tailored to your patient.",
+            "2. **Medication Information:** Enter the patient's medications and click \"Get Medication Info\" to obtain detailed information about active ingredients and drug classifications.",
+            "3. **Preliminary Diagnoses:** After entering the patient's complaint and history, click \"Get Diagnostic Suggestions\" to receive possible diagnoses to consider.",
+            "4. **Test Recommendations:** Use the \"Get Test Recommendations\" button to view appropriate tests and physical examination focuses for the case."
         ],
-        "api_key_link": "You can get an API key from the [OpenAI API page](https://platform.openai.com/api-keys).",
+        "api_key_link": "**Note:** This application requires an OpenAI API key. You can obtain one from the [OpenAI API page](https://platform.openai.com/api-keys).",
         "tab_patient": "Patient Anamnesis",
         "tab_system": "Systems Review",
         "tab_reference": "Reference",
@@ -899,6 +897,22 @@ def main():
             
         with col2:
             st.subheader(t("ai_suggestions"))
+            
+            # Add explanatory text about AI suggestions
+            if st.session_state.language == "tr":
+                st.markdown("""
+                💡 **Nasıl Kullanılır:** Hasta öyküsünün bir kısmını girdikten sonra, 
+                "Soru Önerileri Al" butonuna tıklayarak bu hastaya özel sorulması 
+                gereken ek soruları öğrenebilirsiniz. Bu, önemli detayları 
+                atlamanızı önleyecek ve daha kapsamlı bir anamnez almanıza yardımcı olacaktır.
+                """)
+            else:
+                st.markdown("""
+                💡 **How to Use:** After entering part of the patient history, 
+                you can click on the "Get Question Suggestions" button to receive 
+                tailored follow-up questions specific to this patient. This will help 
+                you avoid missing important details and collect a more comprehensive history.
+                """)
             
             # Check API key
             if not st.session_state.get('api_key', ''):
