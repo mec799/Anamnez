@@ -72,7 +72,7 @@ Uygulama içinde, TUS sınavında başarılı olmak için gerekli anamnez alma p
 
 ### 📋 Overview
 
-The AI-Assisted Medical Anamnesis Application is a tool designed for medical students preparing for exams and physicians, transforming the process of taking patient histories into an interactive and digital experience. The application assists in effective and comprehensive history-taking with various AI-powered features.
+The AI-Assisted Medical Anamnesis Application is a tool designed for medical students and physicians, transforming the process of taking patient histories into an interactive and digital experience. The application assists in effective and comprehensive history-taking with various AI-powered features.
 
 ### ✨ Features
 
